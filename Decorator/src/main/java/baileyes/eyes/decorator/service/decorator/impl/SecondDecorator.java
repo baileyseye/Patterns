@@ -13,7 +13,7 @@ public class SecondDecorator extends BaseServiceDecorator {
     @Override
     public RandomDataDTO performAction() {
         RandomDataDTO result = super.performAction();
-        result.setData(result.getData() + " + Second Decorator Data");
+        result.setData(result.getData().concat(" Second Decorator Data"));
 
         return result;
     }

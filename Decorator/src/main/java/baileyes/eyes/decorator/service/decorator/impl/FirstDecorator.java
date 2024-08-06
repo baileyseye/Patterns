@@ -13,7 +13,7 @@ public class FirstDecorator extends BaseServiceDecorator {
     @Override
     public RandomDataDTO performAction() {
         RandomDataDTO result = super.performAction();
-        result.setData(result.getData() + " + First Decorator Data");
+        result.setData(result.getData().concat(" First Decorator Data"));
 
         return result;
     }
