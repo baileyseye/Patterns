@@ -1,6 +1,6 @@
 package baileyes.eyes.bridge.service;
 
-import baileyes.eyes.bridge.bridge.Abstraction;
+import baileyes.eyes.bridge.bridge.Animal;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class BridgeService {
 
-    private final List<Abstraction> abstractions;
+    private final List<Animal> animals;
 
     public void execute() {
-        for (Abstraction abstraction : abstractions) {
-            abstraction.operation();
+        for (Animal animal : animals) {
+            animal.showBehavior();
         }
     }
 }

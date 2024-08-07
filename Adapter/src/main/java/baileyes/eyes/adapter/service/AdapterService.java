@@ -1,6 +1,6 @@
 package baileyes.eyes.adapter.service;
 
-import baileyes.eyes.adapter.adapter.Target;
+import baileyes.eyes.adapter.adapter.NewCatToy;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AdapterService {
 
-    private final Target target;
+    private final NewCatToy newCatToy;
 
-    public String execute() {
-        return target.request();
+    public String playWithToy() {
+        return newCatToy.play();
     }
 }

@@ -1,6 +1,6 @@
 package baileyes.eyes.factory.abstractfactory.service;
 
-public interface ProductA {
+public interface CatToy {
 
     void use();
 }
