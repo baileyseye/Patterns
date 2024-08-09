@@ -1,0 +1,3 @@
+baileyes.eyes.kafkastarter.config.KafkaProducerConfiguration
+baileyes.eyes.kafkastarter.config.KafkaConsumerConfiguration
+baileyes.eyes.kafkastarter.config.serializer.ObjectMapperConfiguration
