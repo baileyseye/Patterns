@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("api/v1/agg/individuals")
+@RequestMapping("api/v1/agg")
 public class CompositeController {
 
     /**
