@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/v1/agg/individuals")
 @AllArgsConstructor
+@RequestMapping("api/v1/agg/individuals")
 public class CompositeController {
 
     /**
@@ -31,8 +31,8 @@ public class CompositeController {
      */
     @GetMapping("/getAgreementsByIndividualId")
     public CompletableFuture<ResponseEntity<Map<String, List<CommonDto>>>> getAgreementsByIndividualId(
-            @RequestParam UUID individualId) {
+        @RequestParam UUID individualId) {
         return service.getAggregatedAgreements(individualId)
-                .thenApply(ResponseEntity::ok);
+            .thenApply(ResponseEntity::ok);
     }
 }
