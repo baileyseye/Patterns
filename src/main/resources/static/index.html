@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Интерактивная визуализация паттернов проектирования Java Spring Boot — репозиторий baileyes/eyes">
+<meta name="color-scheme" content="dark light">
+<title>Design Patterns · baileyes/eyes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<!-- ================= ШАПКА ================= -->
+<header class="topbar">
+  <button id="burger" class="icon-btn" type="button"
+          aria-label="Открыть меню навигации" aria-expanded="false" aria-controls="sidebar">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+      <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <a class="brand" href="#/" aria-label="На главную">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32" width="26" height="26">
+        <path d="M6 8h9v4H6zM17 20h9v4h-9z" fill="currentColor" opacity=".55"/>
+        <path d="M11 12v4a4 4 0 0 0 4 4h6" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="11" cy="6" r="2.4" fill="currentColor"/>
+        <circle cx="21" cy="26" r="2.4" fill="currentColor"/>
+      </svg>
+    </span>
+    <span class="brand-text">
+      <strong>Design Patterns</strong>
+      <small>baileyes/eyes · Spring Boot</small>
+    </span>
+  </a>
+
+  <div class="search-wrap">
+    <svg class="search-ico" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+      <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M16.5 16.5 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <input id="search" type="search" placeholder="Поиск: Strategy, Kafka, @Order…"
+           aria-label="Поиск по паттернам и Java-классам" autocomplete="off">
+    <kbd class="search-kbd" aria-hidden="true">/</kbd>
+  </div>
+
+  <button id="themeToggle" class="icon-btn" type="button"
+          aria-label="Переключить тему оформления" title="Переключить тему">
+    <svg class="ico-sun" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true">
+      <circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <svg class="ico-moon" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true">
+      <path d="M20 14.5A8.2 8.2 0 0 1 9.5 4 8.3 8.3 0 1 0 20 14.5z"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </svg>
+  </button>
+</header>
+
+<!-- ================= КАРКАС ================= -->
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Навигация по паттернам">
+    <nav id="sideNav" class="side-nav"></nav>
+    <div class="side-foot">
+      <span>Vanilla HTML/CSS/JS</span>
+      <span>без CDN и сборщиков</span>
+    </div>
+  </aside>
+  <div id="backdrop" class="backdrop" hidden></div>
+
+  <main id="main" class="main" tabindex="-1">
+    <nav class="breadcrumbs" id="breadcrumbs" aria-label="Хлебные крошки"></nav>
+    <div id="view" class="view"></div>
+  </main>
+</div>
+
+<footer class="global-footer">
+  <span>© 2026 baileyes/eyes — статический фронтенд из <code>src/main/resources/static/</code></span>
+  <span>Отдаётся встроенным Tomcat: <code>http://localhost:8080/</code></span>
+</footer>
+
+<!-- Один скрипт: ядро + все 13 паттернов -->
+<script src="app.js"></script>
+</body>
+</html>
